@@ -70,3 +70,16 @@ function sendRequest(url, postData){
   request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   request.send(postData);
 }
+
+function hinzufuegen(){
+	var a = document.getElementById("mytable").rows.length * 10;
+	var aid = "p" + a;
+	
+	$("table").append(`<tr>
+						<td><input type = "text"></input></td>
+						<td><button type=button onclick=buttonRemove(${a})>-</button><p id=${aid}> 0 </p><button type="button" onclick=buttonAdd(${a})>+</button></td>
+						<td class="stck">Stck.</td>
+					  </tr>`)
+	
+	
+}
